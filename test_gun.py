@@ -19,3 +19,13 @@ class TestGun(TestCase):
         msg = "The lock position in the gun is incorrect"
         self.gun.unlock()
         self.assertFalse(self.gun.isLock, msg = msg)
+
+    def test_shoot(self):
+        """-- Test Gun Shoot"""
+        msg = ""
+        self.gun.reload(1)
+        self.gun.lock()
+        self.assertEqual(self.gun.shoot(), None, msg = msg)
+        self.gun.unlock()
+        self.assertEqual(self.gun.shoot(), None, msg = msg)
+        self.assertEqual(self.gun.shoot(), None, msg = msg)
