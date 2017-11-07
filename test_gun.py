@@ -16,3 +16,12 @@ class TestGun(TestCase):
         self.assertEqual(Gun(10).reload(10), 0, msg=msg)
         self.assertEqual(Gun(10).reload(12), 2, msg=msg)
 
+    def test_gun_locked(self):
+        """-- Test if the gun is locked"""
+        msg = "The gun is not being correctly locked"
+        magnum = Gun(1)
+        self.assertEqual(magnum.isLock, False, msg=msg)
+        magnum.lock()
+        self.assertEqual(magnum.isLock, True, msg=msg)
+        magnum.unlock()
+        self.assertEqual(magnum.isLock, False, msg=msg)
