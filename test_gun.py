@@ -22,10 +22,17 @@ class TestGun(TestCase):
 
     def test_shoot(self):
         """-- Test Gun Shoot"""
-        msg = ""
+        msg = "The gun can't shoot correctly"
         self.gun.reload(1)
         self.gun.lock()
         self.assertEqual(self.gun.shoot(), None, msg = msg)
         self.gun.unlock()
         self.assertEqual(self.gun.shoot(), None, msg = msg)
         self.assertEqual(self.gun.shoot(), None, msg = msg)
+
+    def test_reload(self):
+        """-- Test Gun Reload"""
+        msg = "The gun can't reload correctly"
+        self.assertEqual(self.gun.reload(5), 0, msg = msg)
+        self.assertEqual(self.gun.reload(-2), None, msg = msg)
+        self.assertEqual(self.gun.reload(6.2), 6.2, msg = msg)
