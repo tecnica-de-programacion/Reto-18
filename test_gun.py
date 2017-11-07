@@ -25,3 +25,14 @@ class TestGun(TestCase):
         self.assertEqual(magnum.isLock, True, msg=msg)
         magnum.unlock()
         self.assertEqual(magnum.isLock, False, msg=msg)
+
+    def test_gun_shoot(self):
+        """-- Test if the gun shoots correctly"""
+        msg = "The gun is not shooting correctly"
+        magnum = Gun(1)
+        self.assertEqual(magnum.shoot(), None, msg=msg)
+        magnum.reload(1)
+        magnum.lock()
+        self.assertEqual(magnum.shoot(), None, msg=msg)
+        magnum.unlock()
+        self.assertEqual(magnum.shoot(), 0, msg=msg)
