@@ -5,6 +5,10 @@ sys.tracebacklimit = 0
 
 
 class TestGun(TestCase):
+
+    def setUp(self):
+        print(self._testMethodDoc)
+   
     def test_lock(self):
         """-- Test Locked Gun"""
         pass
