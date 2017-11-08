@@ -14,6 +14,10 @@ class Gun:
     def isLock(self):
         return self.__isLock
 
+    @property
+    def bullets(self):
+        return self.__ammunition
+
     def shoot(self):
         if self.__isLock:
             print("Gun is lock")
