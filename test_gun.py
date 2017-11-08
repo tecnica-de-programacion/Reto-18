@@ -38,6 +38,6 @@ class Test_Gun(TestCase):
     def test_reload_gun(self):
         """-- Test reload gun"""
         msg = "The gun can not reload"
-        
+        self.assertEquals(one_gun.reload(9),0,msg= msg)
 
 
