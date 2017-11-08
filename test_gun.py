@@ -18,3 +18,12 @@ class TestGun(TestCase):
         '''Test Unlocked Gun'''
         self.assertEqual(Gun.unlock(self), None, msg=self.msg)
 
+    def test_shoot(self):
+        '''Test Shoot'''
+        if Gun.isLock == bool:
+            self.assertIsNone(Gun.shoot(self), msg=self.msg)
+
+    def test_reload(self):
+        '''Test Shoot'''
+        self.assertEqual(Gun.reload(self, int), int, msg = self.msg)
+
