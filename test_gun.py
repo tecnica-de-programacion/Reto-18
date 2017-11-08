@@ -11,7 +11,10 @@ class TestGun(TestCase):
    
     def test_lock(self):
         """-- Test Locked Gun"""
-        pass
+        msg = "the gun is unlocked when this is not true"
+        self.assertIsNone(Gun.lock(self),msg = msg)
+        gun_test = Gun(6)
+        self.assertFalse(gun_test.isLock,msg=msg)
 
     def test_unlock(self):
         """-- Test Unlocked Gun"""
