@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6114c306-6511-45c0-8108-e85a50259006" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_gun.py" afterPath="$PROJECT_DIR$/test_gun.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,8 +26,8 @@
       <file leaf-file-name="test_gun.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_gun.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="32" column="7" lean-forward="true" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+            <state relative-caret-position="176">
+              <caret line="33" column="8" lean-forward="false" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -145,18 +144,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_test_gun_py - 2017.11.07 at 21h 49m 22s.xml">
-      <configuration name="Unittests in test_gun.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_gun_py - 2017.11.07 at 21h 50m 12s.xml">
-      <configuration name="Unittests in test_gun.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_gun_py - 2017.11.07 at 21h 56m 20s.xml">
-      <configuration name="Unittests in test_gun.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_gun_py - 2017.11.07 at 21h 56m 40s.xml">
-      <configuration name="Unittests in test_gun.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_in_test_gun_py - 2017.11.07 at 22h 04m 09s.xml">
       <configuration name="Unittests in test_gun.py" configurationId="tests" />
     </history-entry>
@@ -173,6 +160,18 @@
       <configuration name="Unittests in test_gun.py" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_in_test_gun_py - 2017.11.07 at 22h 34m 22s.xml">
+      <configuration name="Unittests in test_gun.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_gun_py - 2017.11.07 at 22h 36m 09s.xml">
+      <configuration name="Unittests in test_gun.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_gun_py - 2017.11.07 at 22h 36m 47s.xml">
+      <configuration name="Unittests in test_gun.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_gun_py - 2017.11.07 at 22h 37m 13s.xml">
+      <configuration name="Unittests in test_gun.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_gun_py - 2017.11.07 at 22h 37m 50s.xml">
       <configuration name="Unittests in test_gun.py" configurationId="tests" />
     </history-entry>
   </component>
@@ -236,8 +235,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_gun.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="32" column="7" lean-forward="true" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+        <state relative-caret-position="176">
+          <caret line="33" column="8" lean-forward="false" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
