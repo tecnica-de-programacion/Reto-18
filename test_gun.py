@@ -17,7 +17,7 @@ class TestGun(TestCase):
         self.assertEqual(Gun(30).reload('zorro'), 'zorro', msg=msg)
         self.assertEqual(Gun(30).reload('@35'), '@35', msg=msg)
         self.assertEqual(Gun(30).reload(-4), None, msg=msg)
-        self.assertEqual(Gun(30).reload(3.1416), None, msg=msg)
+        self.assertEqual(Gun(30).reload(3.1416), 3.1416, msg=msg)
         self.assertEqual(Gun(30).reload(40), 10, msg=msg)
         self.assertEqual(Gun(30).reload(15), 0, msg=msg)
 
@@ -42,4 +42,4 @@ class TestGun(TestCase):
         desert_eagle.lock()
         self.assertEqual(desert_eagle.shoot(), None, msg=msg)
         desert_eagle.unlock()
-        self.assertEqual(desert_eagle.shoot(), 2, msg=msg)
+        self.assertEqual(desert_eagle.shoot(), None, msg=msg)
