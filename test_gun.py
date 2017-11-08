@@ -28,9 +28,9 @@ class TestGun(TestCase):
         msg = "Your gun isnt shooting, smthg wrong tho :("
         demo_gun = Gun(6)
         self.assertEqual(demo_gun.shoot(), "Gun is empty", msg=msg)
-        gun.reload(4)
+        demo_gun.reload(4)
         self.assertEqual(demo_gun.shoot(), 3, msg=msg)
-        gun.lock()
+        demo_gun.lock()
         self.assertEqual(demo_gun.shoot(), "Gun is lock", msg=msg)
 
     def test_reload(self):
