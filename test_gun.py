@@ -14,10 +14,14 @@ class TestGun(TestCase):
     def test_lock(self):
         """-- Test Gun Lock"""
         msg = "The gun is not lock"
-        self.assertTrue(self.gun.lock)
+        self.gun.lock()
+        self.assertTrue(self.gun.isLock, msg = msg)
 
     def test_unlock(self):
-        pass
+        """-- Test Gun is Unlock"""
+        msg ="The gun is lock"
+        self.gun.unlock()
+        self.assertFalse(self.gun.isLock, msg = msg)
 
     def test_isLock(self):
         pass
