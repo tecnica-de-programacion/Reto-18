@@ -53,5 +53,6 @@ class TestGun(TestCase):
         """-- Test Shooting"""
         msg = "The gun can't shoot"
         self.gun.unlock()
-        self.gun.reload(2)
-        self.assertEqual(self.gun.shoot(), None, msg=msg)
+        self.gun.reload(5)
+        self.gun.shoot()
+        self.assertEqual(self.gun._Gun__ammunition, 4, msg=msg)
