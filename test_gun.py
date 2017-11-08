@@ -6,19 +6,12 @@ sys.tracebacklimit = 0
 
 
 class TestGun(TestCase):
-    msg = 'The correct value is not the expected'
     def setUp(self):
         print(self._testMethodDoc)
 
     def test_lock_gun(self):
         '''Test Locked Gun'''
-        self.assertEqual(Gun.lock(self), None, msg = self.msg)
-        self.assertEqual(Gun.lock(self), True, msg = self.msg)
-        self.assertEqual(Gun.lock(self), False, msg=self.msg)
-
-    def test_unlock_gun(self):
-        '''Test Unlocked Gun'''
-        self.assertEqual(Gun.unlock(self), None, msg = self.msg)
-        self.assertEqual(Gun.unlock(self), False, msg=self.msg)
-        self.assertEqual(Gun.unlock(self), True, msg=self.msg)
+        msg = 'The correct value is not the expected'
+        self.assertEqual(Gun.lock(self), None, msg = msg)
+        self.assertEqual(Gun.lock(self), True, msg=msg)
     
