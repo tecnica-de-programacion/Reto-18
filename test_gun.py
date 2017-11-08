@@ -29,10 +29,16 @@ class TestGun(TestCase):
         msg = "isLock is not return the value expect"
         gun_test = Gun(6)
         self.assertFalse(gun_test.isLock,msg = msg)
-        
+
     def test_shoot(self):
         """-- Test Shoot"""
-        pass
+        msg = "the correct value is not the expect"
+        gun_test = Gun(6)
+        self.assertEqual(gun_test.shoot(),None, msg=msg)
+        gun_test.reload(2)
+        self.assertEqual(gun_test.shoot(),None, msg=msg)
+        gun_test.lock()
+        self.assertEqual(gun_test.shoot(), None, msg=msg)
 
     def test_reload(self):
         """-- Test Reload """
