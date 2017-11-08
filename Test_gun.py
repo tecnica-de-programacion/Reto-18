@@ -22,8 +22,10 @@ class Test_my_Gun(TestCase):
 
     def test_lock_gun(self):
         """Test, lock my gun"""
-        pass
-
+        msg = "My gun has not locked"
+        self.my_gun.lock()
+        self.assertIs(self.my_gun.isLock, True, msg=msg)
+   
 
     def test_shooting_gun(self):
         """Test, shooting my gun"""
