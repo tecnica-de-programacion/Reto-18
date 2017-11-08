@@ -26,3 +26,14 @@ class TestGun(TestCase):
         self.gun.reload(3)
         self.assertEqual(self.gun.bullets, 3, msg = msg)
 
+    def test_one_bullet_per_shot(self):
+        """ Test one bullet per shot """
+        msg = "does not eliminate one bullet per shot"
+        self.gun.reload(3)
+        self.gun.shoot()
+        self.assertEqual(self.gun.bullets, 2, msg=msg)
+        self.gun.shoot()
+        self.assertEqual(self.gun.bullets, 1, msg=msg)
+        self.gun.shoot()
+        self.assertEqual(self.gun.bullets, 0, msg=msg)
+
