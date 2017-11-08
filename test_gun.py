@@ -20,3 +20,9 @@ class TestGun(TestCase):
         self.gun.unlock()
         self.assertEqual(self.gun.isLock, False, msg=msg)
 
+    def test_reload(self):
+        """ Test reload """
+        msg = " does not recharge the weapon "
+        self.gun.reload(3)
+        self.assertEqual(self.gun.bullets, 3, msg = msg)
+
