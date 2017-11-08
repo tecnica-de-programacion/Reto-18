@@ -42,4 +42,9 @@ class TestGun(TestCase):
 
     def test_reload(self):
         """-- Test Reload """
-        pass
+        msg = "ERROR, value entry is not valid"
+        self.assertEqual(Gun.reload(self, int), int, msg=msg)
+        gun_test = Gun(6)
+        self.assertEqual(gun_test.reload(6),0, msg=msg)
+        self.assertEqual(gun_test.reload(10),10,msg=msg)
+        self.assertEqual(gun_test.reload(-1),None,msg=msg)
