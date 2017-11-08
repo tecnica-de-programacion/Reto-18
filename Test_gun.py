@@ -11,11 +11,14 @@ class Test_my_Gun(TestCase):
 
     def test_is_Lock_gun(self):
         """Test, is lock my gun?"""
-        pass
+        msg = "Error with function isLock"
+        self.assertIsNotNone(self.my_gun.isLock, msg=msg)
 
     def test_unLock_gun(self):
         """Test, unlock my gun"""
-        pass
+        msg = "My gun is lock yet"
+        self.my_gun.unlock()
+        self.assertIs(self.my_gun.isLock, False, msg=msg)
 
     def test_lock_gun(self):
         """Test, lock my gun"""
@@ -27,8 +30,8 @@ class Test_my_Gun(TestCase):
         pass
 
 
-
     def test_reload_gun(self):
+        """Test, reload my gun"""
         pass
 
 
