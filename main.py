@@ -4,8 +4,11 @@ class Gun:
         self.__cartridge_size = cartridge_size
         self.__ammunition = 0
 
+
+
     def lock(self):
         self.__isLock = True
+        return self.__isLock
 
     def unlock(self):
         self.__isLock = False
@@ -14,14 +17,19 @@ class Gun:
     def isLock(self):
         return self.__isLock
 
+
+    @property
     def shoot(self):
         if self.__isLock:
             print("Gun is lock")
-            return
+            return ("Gun is lock")
+
         if self.__ammunition > 0:
             self.__ammunition -= 1
+            print('PUM')
         else:
             print("Gun is empty")
+            return ("Gun is empty")
 
     def reload(self, ammunition):
         if not isinstance(ammunition, int):
@@ -35,3 +43,10 @@ class Gun:
         return ammunition_count
 
 
+newGun = Gun(10)
+print(newGun.isLock)
+print(newGun.reload(7))
+newGun.shoot
+newGun.shoot
+newGun.shoot
+print('\n')
