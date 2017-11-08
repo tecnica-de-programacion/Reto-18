@@ -23,19 +23,17 @@ class Test_Gun(TestCase):
         one_gun.unlock()
         self.assertFalse(one_gun.isLock, msg = msg)
 
-
-    def test_the_unlock_of_gun(self):
-        """-- Test the unlock of the gun"""
-        msg= "The safe of gun is lock"
-
-    def test_shoot_gun(self):
-        """-- Test shoot gun"""
-        msg = "When the gun shoot the safe must lock"
+    def test_correct_type_safe(self):
+        """-- Test correct type of safe"""
+        msg = "The correct value for bool is not returned"
+        self.assertIsInstance(one_gun.isLock, bool, msg = msg)
 
 
-    def test_no_cartridge(self):
-        """-- Test no cartridge in the gun"""
-        pass
+    def test_gun_shoot(self):
+        """-- Test gun shoot"""
+        msg = "The gun can shoot"
+        one_gun.shoot()
+        self.assertFalse(one_gun.isLock, msg = msg)
 
     def test_enough_cartridge(self):
         """-- Test enough cartridge"""
