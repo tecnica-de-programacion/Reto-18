@@ -20,8 +20,10 @@ class Gun:
             return
         if self.__ammunition > 0:
             self.__ammunition -= 1
+            return self.__ammunition
         else:
             print("Gun is empty")
+            return
 
     def reload(self, ammunition):
         if not isinstance(ammunition, int):
