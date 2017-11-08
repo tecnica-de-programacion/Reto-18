@@ -8,30 +8,33 @@ class TestGun(TestCase):
         print(self._testMethodDoc)
         self.gun = Gun(5)
 
-    def tearDown(self):
-        pass
-
     def test_lock(self):
         """-- Test Gun Lock"""
         msg = "The gun is not lock"
         self.gun.lock()
-        self.assertTrue(self.gun.isLock, msg = msg)
+        self.assertIs(self.gun.isLock, True, msg = msg)
 
     def test_unlock(self):
         """-- Test Gun is Unlock"""
-        msg ="The gun is lock"
+        msg = "The gun is lock"
         self.gun.unlock()
-        self.assertFalse(self.gun.isLock, msg = msg)
+        self.assertIs(self.gun.isLock, False, msg = msg)
 
     def test_isLock(self):
-        pass
+        """-- Test Calling is Lock"""
+        msg = "Problem calling isLock"
+        self.assertIsNotNone(self.gun.isLock, msg = msg)
 
     def test_shoot(self):
-        pass
+        """-- Test Shooting"""
+        msg = "The shooting is failing"
+        self.gun.lock()
+        self.assertIsNone(self.gun.shoot(), msg = msg)
 
     def test_reload(self):
         """-- Test Reloading """
         msg = "Failed reloading"
         self.assertIsNone(self.gun.reload(-5), msg = msg)
-        self.assertIsInstance(self.gun.reload(5.5), float, msg = msg)
+        self.assertNotIsInstance(self.gun.reload(5.5), int, msg = msg)
+        self.assertNotIsInstance(self.gun.reload("five"), int, msg = msg)
         self.assertIsInstance(self.gun.reload(5), int, msg = msg)
