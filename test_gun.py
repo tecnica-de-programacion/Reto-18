@@ -28,14 +28,16 @@ class Test_Gun(TestCase):
         msg = "The correct value for bool is not returned"
         self.assertIsInstance(one_gun.isLock, bool, msg = msg)
 
-
     def test_gun_shoot(self):
         """-- Test gun shoot"""
-        msg = "The gun can shoot"
+        msg = "The gun can shoot because the safe is open"
         one_gun.shoot()
         self.assertFalse(one_gun.isLock, msg = msg)
 
-    def test_enough_cartridge(self):
-        """-- Test enough cartridge"""
-        pass
+
+    def test_reload_gun(self):
+        """-- Test reload gun"""
+        msg = "The gun can not reload"
+        
+
 
