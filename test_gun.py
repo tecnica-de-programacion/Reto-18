@@ -30,6 +30,11 @@ class TestGun(TestCase):
         msg = "The shooting is failing"
         self.gun.lock()
         self.assertIsNone(self.gun.shoot(), msg = msg)
+        self.gun.unlock()
+        self.assertIsNone(self.gun.shoot(), msg = msg)
+        self.gun.reload(5)
+        self.gun.shoot()
+        self.assertEqual(self.gun.reload(2), 1, msg = msg)
 
     def test_reload(self):
         """-- Test Reloading """
@@ -37,4 +42,5 @@ class TestGun(TestCase):
         self.assertIsNone(self.gun.reload(-5), msg = msg)
         self.assertNotIsInstance(self.gun.reload(5.5), int, msg = msg)
         self.assertNotIsInstance(self.gun.reload("five"), int, msg = msg)
-        self.assertIsInstance(self.gun.reload(5), int, msg = msg)
+        self.assertIsInstance(self.gun.reload(4), int, msg = msg)
+        self.assertEqual(self.gun.reload(5), 4, msg = msg)
