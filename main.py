@@ -34,4 +34,7 @@ class Gun:
             ammunition_count -= 1
         return ammunition_count
 
-
+# Es necesario agregar esta propiedad para hacer el testing ya que las variables son privadas
+    @property
+    def get_ammunition(self):
+        return self.__ammunition
