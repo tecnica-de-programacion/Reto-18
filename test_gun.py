@@ -30,17 +30,10 @@ class TestGun(TestCase):
         msg = "The shooting has an error"
         self.gun.lock()
         self.assertIsNone(self.gun.shoot(), msg = msg)
-        self.gun.unlock()
-        self.gun.reload(0)
-        
-        self.assertIsNone(self.gun.shoot(), msg=msg)
-
+       
         self.gun.reload(2)
         self.gun.shoot()
         self.assertEqual(self.gun.reload(8), 2, msg=msg)
-
-
-
 
 
     def test_reload(self):
