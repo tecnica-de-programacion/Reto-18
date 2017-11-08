@@ -5,6 +5,8 @@
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff:
+.idea/
+.idea
 .idea/Reto-18.iml
 .idea/misc.xml
 .idea/modules.xml
