@@ -1,37 +1,35 @@
 class Gun:
-    #  This is a representation for a gun's class
+    def __init__(self, cartridge_size):
+        self.__isLock = False
+        self.__cartridge_size = cartridge_size
+        self.__ammunition = 0
 
-    def __init__(self, safe, sizeLoader):
-        self.__safe = safe
-        self.__size_Loader = sizeLoader
-        self.__shelter = sizeLoader
+    def lock(self):
+        self.__isLock = True
 
-    def safe_Gun(self):
-        if self.__safe:
-            self.__safe = False
-        else:
-            self.__safe = True
-        return self.__safe
+    def unlock(self):
+        self.__isLock = False
+
+    @property
+    def isLock(self):
+        return self.__isLock
 
     def shoot(self):
-        if self.__safe:
-            if self.__size_loader > 0:
-                self.__size_loader -= 1
-                return "BUM!"
-            else:
-                return "No hay balas"
+        if self.__isLock:
+            print("Gun is lock")
+            return
+        if self.__ammunition > 0:
+            self.__ammunition -= 1
         else:
-            return "Esta el seguro de la pistola"
+            print("Gun is empty")
 
-    def loader(self):
-        if self.__safe == False:
-            if self.__size_loader < self.__shelter:
-                self.__size_loader += 1
-                return self.__size_loader
-            else:
-                return "No se pueden meter más balas"
-        else:
-            return "Por su seguridad ponga el seguro"
-
-person = Gun(False,10)
-print(person.shoot())
+    def reload(self, ammunition):
+        if not isinstance(ammunition, int):
+            return ammunition
+        if ammunition <= 0:
+            return
+        ammunition_count = ammunition
+        while self.__cartridge_size > self.__ammunition and ammunition_count > 0:
+            self.__ammunition += 1
+            ammunition_count -= 1
+        return ammunition_count
