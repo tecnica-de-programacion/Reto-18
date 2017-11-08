@@ -34,4 +34,3 @@ class Gun:
             ammunition_count -= 1
         return ammunition_count
 
-
