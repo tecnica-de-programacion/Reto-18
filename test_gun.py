@@ -19,6 +19,10 @@ class TestGun(TestCase):
         """-- Testing Reload"""
         msg = "Gun reload wrong"
         gun = Gun(12)
+        
+        returned_bullets = gun.reload("String")
+        self.assertEqual(gun._Gun__ammunition, 0, msg=msg)
+        self.assertEqual(returned_bullets, "String", msg=msg)
 
         returned_bullets = gun.reload(-2)
         self.assertEqual(gun._Gun__ammunition, 0, msg=msg)
