@@ -26,6 +26,13 @@ class TestGun(TestCase):
         self.gun.reload(3)
         self.assertEqual(self.gun.bullets, 3, msg = msg)
 
+    def test_leftover_bullets(self):
+        """ Test leftover bullets """
+        msg = "does not return the leftover bullets"
+        self.assertEqual(self.gun.reload(5), 2, msg = msg)
+        self.assertEqual(self.gun.reload(6), 6, msg=msg)
+
+
     def test_one_bullet_per_shot(self):
         """ Test one bullet per shot """
         msg = "does not eliminate one bullet per shot"
@@ -36,4 +43,6 @@ class TestGun(TestCase):
         self.assertEqual(self.gun.bullets, 1, msg=msg)
         self.gun.shoot()
         self.assertEqual(self.gun.bullets, 0, msg=msg)
+
+
 
