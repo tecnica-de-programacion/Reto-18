@@ -8,7 +8,7 @@ class TestGun(TestCase):
 
     def setUp(self):
         print(self._testMethodDoc)
-   
+
     def test_lock(self):
         """-- Test Locked Gun"""
         msg = "the gun is unlocked when this is not true"
@@ -18,7 +18,11 @@ class TestGun(TestCase):
 
     def test_unlock(self):
         """-- Test Unlocked Gun"""
-        pass
+        msg = "attribute isLock expect 'False'"
+        self.assertIsNone(Gun.unlock(self), msg=msg)
+        gun_test = Gun(6)
+        gun_test.unlock()
+        self.assertFalse(gun_test.isLock,msg=msg)
 
     def test_isLock(self):
         """-- Test If Gun is Lock"""
