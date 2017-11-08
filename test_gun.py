@@ -1,18 +1,34 @@
 from unittest import TestCase
-
-
+from main import Gun
+import sys
+sys.tracebacklimit = 0
+magnum = Gun(10)
 class TestGun(TestCase):
+    def setUp(self):
+        print(self._testMethodDoc)
+
+    def tearDown(self):
+        pass
+
     def test_lock(self):
-        self.fail()
+        """-- Test Lock Gun"""
+        msg = "The Gun is not being locked"
+        magnum.lock()
+        self.assertTrue(magnum.isLock, msg=msg)
 
     def test_unlock(self):
-        self.fail()
+        """-- Test unlock Gun"""
+        msg = "The Gun is not being unlocked"
+        magnum.unlock()
+        self.assertFalse(magnum.isLock, msg=msg)
 
     def test_isLock(self):
-        self.fail()
+        """"-- Test Int isLock"""
+        msg = "The correct type is not being returned for isLock"
+        self.assertIsInstance(magnum.isLock, bool, msg=msg)
 
-    def test_shoot(self):
-        self.fail()
+    #def test_shoot(self):
+        #self.fail()
 
-    def test_reload(self):
-        self.fail()
+    #def test_reload(self):
+        #self.fail()
