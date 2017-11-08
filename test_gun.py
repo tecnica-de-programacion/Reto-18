@@ -26,8 +26,10 @@ class TestGun(TestCase):
 
     def test_isLock(self):
         """-- Test If Gun is Lock"""
-        pass
-
+        msg = "isLock is not return the value expect"
+        gun_test = Gun(6)
+        self.assertFalse(gun_test.isLock,msg = msg)
+        
     def test_shoot(self):
         """-- Test Shoot"""
         pass
