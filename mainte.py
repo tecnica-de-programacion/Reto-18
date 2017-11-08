@@ -33,5 +33,3 @@ class Gun:
             self.__ammunition += 1
             ammunition_count -= 1
         return ammunition_count
-
-
