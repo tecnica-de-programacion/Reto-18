@@ -32,10 +32,10 @@ class TestGun(TestCase):
         self.assertEqual(self.gun.reload(5), 2, msg = msg)
         self.assertEqual(self.gun.reload(6), 6, msg=msg)
 
-
     def test_one_bullet_per_shot(self):
         """ Test one bullet per shot """
         msg = "does not eliminate one bullet per shot"
+        self.gun.unlock()
         self.gun.reload(3)
         self.gun.shoot()
         self.assertEqual(self.gun.bullets, 2, msg=msg)
@@ -43,6 +43,14 @@ class TestGun(TestCase):
         self.assertEqual(self.gun.bullets, 1, msg=msg)
         self.gun.shoot()
         self.assertEqual(self.gun.bullets, 0, msg=msg)
+
+    def test_cant_shoot(self):
+        """ test can't shoot (empty ammunition and lock)"""
+        msg = "should not shoot"
+        self.gun.lock()
+        self.assertEqual(self.gun.shoot(), None, msg = msg)
+        self.gun.unlock()
+        self.assertEqual(self.gun.shoot(), None, msg = msg)
 
 
 
