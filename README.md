@@ -1,7 +1,4 @@
-Reto-18: Testing Gun
+Reto-18: Bernardo Domínguez Pedroza
 =========
 
-Con base en el Reto: 12, realiza el Unit Test para la clase Gun
-
-# Entrega
-Martes 7 - 22:30 a 23:00
+## Done
