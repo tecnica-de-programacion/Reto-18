@@ -44,6 +44,9 @@ class Test_my_Gun(TestCase):
         self.assertNotIsInstance(self.my_gun.reload(23.09), int, msg=msg)
         self.assertIsNone(self.my_gun.reload(-99), msg=msg)
         self.assertIsInstance(self.my_gun.reload(10), int, msg=msg)
+        self.assertIs(self.my_gun.reload(92),2, msg=msg)
+
+
 
 
 
