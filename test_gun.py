@@ -30,4 +30,8 @@ class TestGun(TestCase):
         pass
 
     def test_reload(self):
-        pass
+        """-- Test Reloading """
+        msg = "Failed reloading"
+        self.assertIsNone(self.gun.reload(-5), msg = msg)
+        self.assertIsInstance(self.gun.reload(5.5), float, msg = msg)
+        self.assertIsInstance(self.gun.reload(5), int, msg = msg)
