@@ -13,3 +13,8 @@ class TestGun(TestCase):
     def test_lock_gun(self):
         '''Test Locked Gun'''
         self.assertEqual(Gun.lock(self), None, msg = self.msg)
+
+    def test_unlock_gun(self):
+        '''Test Unlocked Gun'''
+        self.assertEqual(Gun.unlock(self), None, msg=self.msg)
+
